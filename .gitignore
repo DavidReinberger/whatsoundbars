@@ -1,5 +1,6 @@
 #ENVS
 .env
+.next
 
 # INTERNAL
 coverage
@@ -7,3 +8,4 @@ coverage
 /build
 .vscode
 .idea
+out
