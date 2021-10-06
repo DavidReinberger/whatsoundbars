@@ -1,0 +1,9 @@
+#ENVS
+.env
+
+# INTERNAL
+coverage
+/node_modules
+/build
+.vscode
+.idea
