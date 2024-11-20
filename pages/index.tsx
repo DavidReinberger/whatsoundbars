@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo, useState } from 'react';
+import { useContext, useEffect, useLayoutEffect, useMemo, useState } from 'react';
 import { Filters, IdType, useFilters, useSortBy, useTable } from 'react-table';
 import type { NextPage } from 'next';
 import type { Soundbar } from '../src/types';

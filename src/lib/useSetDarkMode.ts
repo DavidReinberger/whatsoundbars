@@ -5,7 +5,7 @@ import useLocalStorage from './useLocalStorage';
 const useSetDarkMode = (initialState?: boolean) => {
   const prefersDarkMode = usePrefersDarkMode();
   const [persistedDarkMode, persistDarkMode] = useLocalStorage('darkMode');
-  const [isDarkMode, setIsDarkMode] = useState(persistedDarkMode() ?? initialState ?? prefersDarkMode);
+  const [isDarkMode, setIsDarkMode] = useState(prefersDarkMode ?? persistedDarkMode() ?? initialState);
 
   const setInitialDarkMode = (forcedMode: boolean) => setIsDarkMode(forcedMode ?? persistedDarkMode() ?? prefersDarkMode);
 
@@ -13,7 +13,7 @@ const useSetDarkMode = (initialState?: boolean) => {
     persistDarkMode((!!isDarkMode).toString());
   }, [isDarkMode]);
 
-  return [isDarkMode, setIsDarkMode, setInitialDarkMode];
+  return [isDarkMode, setIsDarkMode, setInitialDarkMode] as const;
 
 };
 
