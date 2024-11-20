@@ -54,9 +54,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Grommet theme={deepMerge(grommetTheme, NormalTheme)} themeMode={isDarkMode ? 'dark' : 'light'}>
         <DarkModeToggle isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
         <Component {...pageProps} detectInitialDarkMode={setInitialDarkMode} />
-        <Footer justify="center" pad="xsmall">
-            <Text size="xsmall" color="dark-1">As an Amazon Associate I earn from qualifying purchases.</Text>
-        </Footer>
       </Grommet>
     </>
   );

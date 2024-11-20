@@ -7,7 +7,7 @@ const MSRP = ({ row: { original } }: { row: { original: Soundbar } }) => {
   const trackClick = () => event({ action: 'click_msrp', category: 'soundbar', value: calculateConversionValueFromMSRP(original.MSRP) });
   return (
     <AmazonLink
-      href={`https://www.amazon.com/gp/search?ie=UTF8&tag=whatsoundba0c-20&linkCode=ur2&index=electronics&keywords=${encodeURIComponent([
+      href={`https://www.amazon.com/gp/search?ie=UTF8&linkCode=ur2&index=electronics&keywords=${encodeURIComponent([
         original.manufacturer,
         original.name,
       ].join(' '))}`}
